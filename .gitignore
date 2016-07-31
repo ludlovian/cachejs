@@ -1,0 +1,8 @@
+# node
+node_modules/
+
+# test data
+test/
+
+# vim swap
+*.swp

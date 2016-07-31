@@ -1,0 +1,19 @@
+{
+  "name": "cachejs",
+  "version": "0.0.1",
+  "description": "Caching FUSE filesystem",
+  "main": "lib/index.js",
+  "dependencies": {
+    "fuse-bindings": "^2.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "/nas/config/git/cachejs.git/"
+  },
+  "author": "",
+  "license": "ISC"
+}
