@@ -4,7 +4,12 @@
   "description": "Caching FUSE filesystem",
   "main": "lib/index.js",
   "dependencies": {
-    "fuse-bindings": "^2.9.0"
+    "debug": "^2.2.0",
+    "fs-extra": "^0.30.0",
+    "fuse-bindings": "^2.9.0",
+    "minimist": "^1.2.0",
+    "pathlib": "git+ssh://localhost/nas/config/git/pathlib.git",
+    "pixpromise": "git+ssh://localhost/nas/config/git/pixpromise.git"
   },
   "devDependencies": {},
   "scripts": {
