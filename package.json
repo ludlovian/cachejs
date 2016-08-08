@@ -1,6 +1,6 @@
 {
   "name": "cachejs",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Caching FUSE filesystem",
   "main": "lib/index.js",
   "dependencies": {
