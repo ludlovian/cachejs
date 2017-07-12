@@ -4,13 +4,16 @@
   "description": "Caching FUSE filesystem",
   "main": "lib/index.js",
   "dependencies": {
-    "debug": "^2.2.0",
+    "cmd": "git+ssh://localhost/nas/config/git/cmd.git",
+    "debug": "^2.6.8",
     "fs-extra": "^0.30.0",
-    "fuse-bindings": "^2.9.0",
     "minimist": "^1.2.0",
-    "nedb": "^1.8.0",
+    "nedb-promise": "^2.0.1",
     "pathlib": "git+ssh://localhost/nas/config/git/pathlib.git",
-    "pixpromise": "git+ssh://localhost/nas/config/git/pixpromise.git"
+    "pathscan": "git+ssh://localhost/nas/config/git/pathscan.git",
+    "promise-fuse": "git+ssh://localhost/nas/config/git/promise-fuse.git",
+    "promise-queue": "git+ssh://localhost/nas/config/git/promise-queue.git",
+    "thenify": "^3.3.0"
   },
   "devDependencies": {},
   "scripts": {
