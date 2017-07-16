@@ -13,6 +13,8 @@
     "pathscan": "git+ssh://localhost/nas/config/git/pathscan.git",
     "promise-fuse": "git+ssh://localhost/nas/config/git/promise-fuse.git",
     "promise-queue": "git+ssh://localhost/nas/config/git/promise-queue.git",
+    "promise-timer": "git+ssh://localhost/nas/config/git/promise-timer.git",
+    "shuffle-array": "^1.0.1",
     "thenify": "^3.3.0"
   },
   "devDependencies": {},
