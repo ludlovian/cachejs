@@ -7,19 +7,19 @@
 
   "preload": {
     "filter": "^.+\\.flac$",
-    "openDelay": 1000,
+    "openDelay": 2000,
     "siblings": 3
   },
 
   "cleanup": {
-    "cleanAfter": 3600,
-    "cleanFrequency": 3600,
+    "cleanAfter": 21600,
+    "cleanFrequency": 21600,
     "ignoreFilter": "^.*[^\\d-](1[-0])?0?1\\.flac$"
   },
 
   "fuseOptions": [],
 
-  "queueLimit": 10,
+  "queueLimit": 20,
 
   "logLevel": 1
 
