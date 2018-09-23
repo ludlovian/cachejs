@@ -5,22 +5,24 @@
   "main": "lib/index.js",
   "dependencies": {
     "cmd": "git+ssh://localhost/nas/config/git/cmd.git",
-    "debug": "^2.6.8",
-    "fs-extra": "^0.30.0",
+    "config": "^2.0.1",
+    "debug": "^4.0.1",
+    "lodash": "^4.17.11",
     "minimist": "^1.2.0",
-    "nedb-promise": "^2.0.1",
     "pathlib": "git+ssh://localhost/nas/config/git/pathlib.git",
     "pathscan": "git+ssh://localhost/nas/config/git/pathscan.git",
     "promise-fuse": "git+ssh://localhost/nas/config/git/promise-fuse.git",
     "promise-queue": "git+ssh://localhost/nas/config/git/promise-queue.git",
     "promise-timer": "git+ssh://localhost/nas/config/git/promise-timer.git",
-    "shuffle-array": "^1.0.1",
-    "thenify": "^3.3.0"
+    "unionfs": "git+ssh://localhost/nas/config/git/unionfs.git"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^5.6.0",
+    "tap": "^12.0.1"
+  },
   "scripts": {
-    "lint": "jshint lib/*.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint lib/*.js test/*.js",
+    "test": "npm run lint && tap -Rspec --cov test/??-*.js"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,9 @@
+{
+  "dirs": {
+    "source": "./test/source",
+    "cache": "./test/cache",
+    "mount": "./test/mount"
+  },
+
+  "logLevel": 5
+}

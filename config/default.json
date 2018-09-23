@@ -1,0 +1,26 @@
+{
+  "dirs": {
+    "source": "./source",
+    "cache": "./cache",
+    "mount": "./mount"
+  },
+
+  "preload": {
+    "filter": "^.+\\.flac$",
+    "openDelay": 1000,
+    "siblings": 3
+  },
+
+  "cleanup": {
+    "cleanAfter": 3600,
+    "cleanFrequency": 3600,
+    "ignoreFilter": "^.*[^\\d-](1[-0])?0?1\\.flac$"
+  },
+
+  "fuseOptions": [],
+
+  "queueLimit": 10,
+
+  "logLevel": 1
+
+}

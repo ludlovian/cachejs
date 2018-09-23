@@ -1,8 +1,10 @@
 # node
 node_modules/
 
+
 # test data
 test/
+.nyc_output/
 
 # vim swap
 *.swp
