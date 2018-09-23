@@ -5,5 +5,10 @@
     "mount": "./test/mount"
   },
 
+  "cleanup": {
+    "cleanAfter": 10,
+    "cleanFrequency": 120
+  },
+
   "logLevel": 5
 }
