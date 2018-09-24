@@ -2,6 +2,7 @@
 
 const PathScan = require('pathscan'),
   _ = require('lodash'),
+  Path = require('pathlib'),
   { promisify } = require('util'),
   fs = require('fs'),
   delay = promisify(setTimeout),
@@ -36,7 +37,7 @@ exports.setConfig = function setConfig(extra = {}) {
     process.env.NODE_ENV='test';
     await config.reload();
     _.merge(config, extra);
-    t.equal(config.dirs.source, './test/source', 'config set');
+    t.equal(config.dirs.source, Path.create('./test/source').resolve().path, 'config set');
   });
 };
 
