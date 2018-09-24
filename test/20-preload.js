@@ -43,7 +43,7 @@ test('preload', async t => {
 
       const files = await getCachedFiles();
       t.deepEqual(files, ['track01.flac', 'track02.flac', 'track03.flac', 'track04.flac', 'track05.flac'], 'five files preloaded');
-      t.equal(log.lines.length, 2, 'right log lines printed');
+      t.match(log.lines, [ /^MISS {4}/, /^SIBS {4}/, /^CACHE {3}/], 'right log lines printed');
     }),
 
     t.test('read a non-cached file', async t => {
@@ -55,7 +55,7 @@ test('preload', async t => {
 
       const files = await getCachedFiles();
       t.equal(files.length, 5, 'no more files cached');
-      t.equal(log.lines.length, 1, 'right log lines printed');
+      t.match(log.lines, [ /^READ {4}/ ], 'right log lines printed');
     }),
 
     t.test('read a file in subdir', async t => {
@@ -67,7 +67,19 @@ test('preload', async t => {
 
       const files = await getCachedFiles();
       t.equal(files.length, 6, 'file was cached');
-      t.equal(log.lines.length, 2, 'right log lines printed');
+      t.match(log.lines, [ /^MISS {4}/, /^SIBS {4}/, /^CACHE {3}/], 'right log lines printed');
+    }),
+
+    t.test('read a file already cached', async t => {
+      const f = Path.create('test/mount/subdir/track10.flac');
+      log.lines.splice(0);
+
+      await readFile(t, f, 200);
+      await worker.idle();
+
+      const files = await getCachedFiles();
+      t.equal(files.length, 6, 'file was cached');
+      t.match(log.lines, [ /^HIT {5}/, /^SIBS {4}/ ], 'right log lines printed');
     }),
   ]);
 
