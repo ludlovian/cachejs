@@ -9,9 +9,7 @@
     "lodash": "^4.17.11",
     "pathlib": "git+ssh://localhost/nas/config/git/pathlib.git",
     "pathscan": "git+ssh://localhost/nas/config/git/pathscan.git",
-    "promise-fuse": "git+ssh://localhost/nas/config/git/promise-fuse.git",
     "promise-queue": "git+ssh://localhost/nas/config/git/promise-queue.git",
-    "promise-timer": "git+ssh://localhost/nas/config/git/promise-timer.git",
     "unionfs": "git+ssh://localhost/nas/config/git/unionfs.git"
   },
   "devDependencies": {
