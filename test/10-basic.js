@@ -50,9 +50,9 @@ test('basic running', async t => {
       await cachejs.start();
       t.pass('started ok');
 
-      const f = Path.create('./test/mount/track03.flac');
+      const f = Path.create('./test/mount/metadata.json');
       const data = await f.read('utf8');
-      t.equal(data, 'data03', 'file read ok');
+      t.equal(data, 'some data', 'file read ok');
 
       await cachejs.stop('keepAlive');
       t.pass('stopped ok');

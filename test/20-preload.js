@@ -38,7 +38,8 @@ test('preload', async t => {
       const f = Path.create('test/mount/track01.flac');
       log.lines.splice(0);
 
-      await readFile(t, f, 200);
+      //await readFile(t, f, 200);
+      await f.read('utf8');
       await worker.idle();
 
       const files = await getCachedFiles();
