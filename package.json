@@ -10,6 +10,7 @@
     "pathlib": "git+ssh://localhost/nas/config/git/pathlib.git",
     "pathscan": "git+ssh://localhost/nas/config/git/pathscan.git",
     "promise-queue": "git+ssh://localhost/nas/config/git/promise-queue.git",
+    "trigger": "git+ssh://localhost/nas/config/git/trigger.git",
     "unionfs": "git+ssh://localhost/nas/config/git/unionfs.git"
   },
   "devDependencies": {
