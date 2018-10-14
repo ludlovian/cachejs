@@ -1,31 +1,41 @@
 'use strict';
 
-const
+// set up the physical test files
+
+const Path = require('pathlib'),
+  root = Path.create('test'),
+  { execSync } = require('child_process'),
+
   tap = require('tap'),
-  test = tap.test,
-  Path = require('pathlib'),
+  test = tap.test;
   
-  root = Path.create('test');
 
 test('setup environment', async t => {
-  const dirs = [ 'cache', 'mount', 'source', 'source/subdir' ];
+  [ 'cache', 'mount', 'source' ].forEach(dir =>
+    execSync(`rm test/${dir}/ -rf`));
 
   await Promise.all(
-    dirs
-      .map(dir => root.join(dir))
-      .map(dir => dir.mkdirs())
+    [ 'cache', 'mount', 'source', 'source/subdir' ]
+    .map(dir => root.join(dir).mkdirs())
   );
 
-  t.pass('dirs made');
+  await Promise.all(
+    [
+      { path: 'source/track01.flac', content: 'data01' },
+      { path: 'source/track02.flac', content: 'data02' },
+      { path: 'source/track03.flac', content: 'data03' },
+      { path: 'source/track04.flac', content: 'data04' },
+      { path: 'source/track05.flac', content: 'data05' },
+      { path: 'source/track06.flac', content: 'data06' },
+      { path: 'source/track07.flac', content: 'data07' },
+      { path: 'source/track08.flac', content: 'data08' },
+      { path: 'source/track09.flac', content: 'data09' },
 
-  for (let i=1; i<=9; i++) {
-    const file = root.join(`source/track0${i}.flac`);
-    await file.write(`data0${i}`);
-  }
+      { path: 'source/metadata.json', content: 'some data' },
 
-  await root.join('source/metadata.json').write('some data');
-
-  await root.join('source/subdir/track10.flac').write('data10');
+      { path: 'source/subdir/track10.flac', content: 'data10' },
+    ].map(f => root.join(f.path).write(f.content))
+  );
 
   t.pass('files made');
 });

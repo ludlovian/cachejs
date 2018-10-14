@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "eslint": "*",
+    "sinon": "^6.3.4",
     "tap": "*"
   },
   "scripts": {
