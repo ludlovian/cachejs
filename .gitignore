@@ -4,6 +4,7 @@ node_modules/
 
 # test data
 .nyc_output/
+coverage/
 
 # vim swap
 *.swp

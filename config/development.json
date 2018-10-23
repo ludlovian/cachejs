@@ -5,5 +5,5 @@
     "mount": "./test/mount"
   },
 
-  "logLevel": 5
+  "logLevel": "debug"
 }

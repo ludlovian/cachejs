@@ -10,5 +10,5 @@
     "cleanFrequency": 120
   },
 
-  "logLevel": 5
+  "queueLimit": 5
 }

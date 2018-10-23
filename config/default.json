@@ -22,6 +22,6 @@
 
   "queueLimit": 20,
 
-  "logLevel": 1
+  "logLevel": "warn"
 
 }

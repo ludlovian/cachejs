@@ -4,23 +4,31 @@
   "description": "Caching FUSE filesystem",
   "main": "lib/index.js",
   "dependencies": {
-    "cmd": "git+ssh://localhost/nas/config/git/cmd.git",
-    "debug": "*",
-    "lodash": "^4.17.11",
-    "pathlib": "git+ssh://localhost/nas/config/git/pathlib.git",
-    "pathscan": "git+ssh://localhost/nas/config/git/pathscan.git",
-    "promise-queue": "git+ssh://localhost/nas/config/git/promise-queue.git",
+    "config": "^2.0.1",
+    "console-log-level": "^1.4.0",
+    "debug": "^4.1.0",
+    "event-fs": "git+ssh://localhost/nas/config/git/event-fs.git",
+    "execa": "^1.0.0",
+    "fuse-fs": "git+ssh://localhost/nas/config/git/fuse-fs.git",
+    "limb-fs": "git+ssh://localhost/nas/config/git/limb-fs.git",
+    "mkdirp": "^0.5.1",
+    "p-queue": "^3.0.0",
     "trigger": "git+ssh://localhost/nas/config/git/trigger.git",
-    "unionfs": "git+ssh://localhost/nas/config/git/unionfs.git"
+    "unionfs": "^3.0.2"
   },
   "devDependencies": {
-    "eslint": "*",
-    "sinon": "^6.3.4",
+    "fs-monkey": "^0.3.3",
+    "http-server": "^0.11.1",
+    "memfs": "^2.10.1",
+    "sinon": "^6.3.5",
+    "snazzy": "^8.0.0",
+    "standard": "^12.0.1",
     "tap": "*"
   },
   "scripts": {
-    "lint": "eslint lib/*.js test/*.js",
-    "test": "npm run lint && tap -Rspec --cov test/??-*.js"
+    "lint": "standard | snazzy",
+    "test": "npm run lint && NODE_ENV=test tap --cov test/*.js",
+    "coverage": "npm run test && nyc report --reporter=html && http-server coverage/ -p 8000"
   },
   "repository": {
     "type": "git",

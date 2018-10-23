@@ -5,7 +5,5 @@
         "mount": "/srv/data"
     },
 
-    "fuseOptions": ["fsname=cachejs","allow_other","default_permissions"],
-
-    "logLevel": 5
+    "fuseOptions": ["fsname=cachejs","allow_other","default_permissions"]
 }
