@@ -20,8 +20,8 @@
 
   "fuseOptions": [],
 
-  "queueLimit": 20,
+  "queueLimit": 200,
 
-  "logLevel": "warn"
+  "logLevel": "info"
 
 }

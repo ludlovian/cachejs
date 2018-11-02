@@ -16,6 +16,7 @@ tap.test('worker', async t => {
     const p = worker.push('foo', fn)
     t.type(p, Promise, 'push returns a promise')
 
+    await worker.onIdle()
     const res = await p
     t.same(res, 'bar', 'promise resolves')
   })
@@ -63,9 +64,9 @@ tap.test('worker', async t => {
 
     sinon.replace(log, 'warn', logWarn)
 
-    const prom = worker.push('foo', fn)
+    worker.push('foo', fn)
 
-    await prom
+    await worker.onIdle()
 
     t.same(logWarn.callCount, 2, 'two warning lines produced')
     t.match(logWarn.args, [

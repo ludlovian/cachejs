@@ -5,10 +5,17 @@
     "mount": "./test/mount"
   },
 
+  "preload": {
+      "openDelay": 30,
+      "siblings": 1
+  },
+
   "cleanup": {
     "cleanAfter": 10,
     "cleanFrequency": 120
   },
 
-  "queueLimit": 5
+  "queueLimit": 10,
+
+  "logLevel": "info"
 }
