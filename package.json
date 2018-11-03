@@ -9,6 +9,7 @@
     "debug": "^4.1.0",
     "fuse-fs": "git+ssh://localhost/nas/config/git/fuse-fs.git",
     "p-queue": "^3.0.0",
+    "mkdirp": "^0.5.1",
     "trigger": "git+ssh://localhost/nas/config/git/trigger.git",
     "wrap-fs": "git+ssh://localhost/nas/config/git/wrap-fs.git"
   },
@@ -16,7 +17,6 @@
     "fs-monkey": "^0.3.3",
     "http-server": "^0.11.1",
     "memfs": "^2.10.1",
-    "mkdirp": "^0.5.1",
     "rimraf": "^2.6.2",
     "sinon": "^6.3.5",
     "snazzy": "^8.0.0",
