@@ -12,7 +12,7 @@ var TimedTrigger = _interopDefault(require('timed-trigger'));
 var Emitter = _interopDefault(require('emitter'));
 var filescan = _interopDefault(require('filescan'));
 
-var version = "1.4.1";
+var version = "1.5.0";
 
 const priv = Symbol('priv');
 class Cache extends Emitter {
