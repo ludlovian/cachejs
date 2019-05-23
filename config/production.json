@@ -1,9 +1,0 @@
-{
-    "dirs": {
-        "source": "/mnt/rodata/media/music/albums/Classical",
-        "cache": "/var/cache/cachejs/files",
-        "mount": "/srv/data"
-    },
-
-    "fuseOptions": ["fsname=cachejs","allow_other","default_permissions"]
-}

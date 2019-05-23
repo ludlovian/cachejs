@@ -1,9 +1,0 @@
-{
-  "dirs": {
-    "source": "/nas/data/media/music/albums/Classical",
-    "cache": "./test/cache",
-    "mount": "./test/mount"
-  },
-
-  "logLevel": "debug"
-}
