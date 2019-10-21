@@ -264,7 +264,7 @@ class Report {
   constructor (options) {
     this.options = options;
     this.level = getLevel(options);
-    for (let [msg, msgLevel, fn] of Messages) {
+    for (const [msg, msgLevel, fn] of Messages) {
       if (msgLevel > this.level) {
         this[msg] = NOOP;
       } else {
